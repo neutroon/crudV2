@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap');
+
+/* global */
+:root {
+  --mainColor: #fec260;
+}
+::selection {
+  background-color: var(--mainColor);
+}
+body {
+  font-family: "PT Sans Caption", sans-serif;
+  background-color: #f7ecde;
+}
+
+/* body */
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+h1::after {
+  content: "";
+  width: 100%;
+  height: 25%;
+  background-color: var(--mainColor);
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s ease-in-out;
+}
+h1:hover::after {
+  height: 75%;
+}
+
+.inputs {
+  border: 2px dotted rgba(0, 0, 0, 0.626);
+  border-left: 0;
+  border-right: 0;
+}
+.inputs label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.inputs h2 {
+  background-image: linear-gradient(to right, rgb(4, 181, 4), rgb(178, 178, 7));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /* -webkit-text-fill-color: transparent;  */
+}
+
+a:active,
+button:active {
+  background-color: white !important;
+  color: black !important;
+  border-color: black !important;
+}
+.modal .modal-header {
+  border-bottom: none;
+  padding: 1.4rem 1rem;
+}
+.modal .modal-header .modal-title {
+  margin: 0;
+}
+.modal .modal-header .modal-title span {
+  --size: 1.3rem;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  margin: 3px;
+  cursor: pointer;
+}
+.modal .modal-header .modal-title span:nth-child(1) {
+  background-color: #f15f5d;
+}
+.modal .modal-header .modal-title span:nth-child(2) {
+  background-color: #febe2e;
+}
+.modal .modal-header .modal-title span:nth-child(3) {
+  background-color: #4db748;
+}
+.modal .modal-body p {
+  font-family: "Bree Serif", serif;
+  font-size: 21px;
+}
+
+.modal .modal-body ul li {
+  font-size: 18px;
+  padding-top: 10px;
+  list-style: none;
+}
+.modal .modal-body ul li i {
+  color: #bb4120;
+}
+
+
+mark{
+  padding: 0;
+  background-color: rgba(255, 0, 0, 0.639);
+  color: white;
+}
